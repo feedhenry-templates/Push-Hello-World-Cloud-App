@@ -34,5 +34,5 @@
     "debug": "grunt serve",
     "start": "node application.js"
   },
-  "license": "mit"
+  "license": "Apache-2.0"
 }
