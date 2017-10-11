@@ -2,12 +2,13 @@
   "name": "Push-Hello-World-Cloud-App",
   "version": "0.2.0",
   "dependencies": {
-    "body-parser": "~1.0.2",
+    "body-parser": "~1.17.1",
     "cors": "~2.2.0",
-    "express": "~4.0.0",
+    "express": "~4.16.0",
     "fh-mbaas-api": "^6.1.1",
-    "request": "~2.40.0",
-    "winston": "~1.0.0"
+    "request": "~2.81.0",
+    "winston": "~1.0.0",
+    "snyk": "^1.42.6"
   },
   "devDependencies": {
     "grunt-concurrent": "latest",
@@ -32,7 +33,10 @@
   "scripts": {
     "test": "grunt unit",
     "debug": "grunt serve",
-    "start": "node application.js"
+    "start": "node application.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "snyk": true
 }
